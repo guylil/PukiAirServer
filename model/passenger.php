@@ -22,6 +22,7 @@ function getPassengerById($id) {
 
 function deletePassengerById($id) {
     global $conn;
+    $sql = "DELETE FROM flight_passenger WHERE passenger_id=".$id;
     $sql = "DELETE FROM passenger WHERE id=".$id;
     $result = $conn->query($sql);
 }

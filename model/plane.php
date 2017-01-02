@@ -21,8 +21,10 @@ function getPlaneById($id) {
 }
 
 function deletePlaneById($id) {
+    //dd($id); 
     global $conn;
     $sql = "DELETE FROM plane WHERE id=".$id;
+    //dd($sql);   
     $result = $conn->query($sql);
 }
 

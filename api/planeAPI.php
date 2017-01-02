@@ -26,9 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $entity = json_decode($entity);
     updatePlane($entity);
 
-} else if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+} else if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {   
+     //dd($_REQUEST['id']);
      $idToRemove = (int)$_REQUEST['id'];
-
+     //dd($idToRemove);
      deletePlaneById($idToRemove);
 
 } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
